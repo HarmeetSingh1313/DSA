@@ -1,15 +1,29 @@
+// class Solution {
+//     public boolean containsDuplicate(int[] nums) {
+//     HashSet<Integer> h=new HashSet<>();
+//     for(int i=0;i<nums.length;i++)
+//     {
+//         if(!h.contains(nums[i]))
+//         {
+//           h.add(nums[i]);
+//         }
+//         else
+//          return true;
+//     }
+//     return false;    
+//     }
+// }
+
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-    HashSet<Integer> h=new HashSet<>();
-    for(int i=0;i<nums.length;i++)
+    Arrays.sort(nums);
+    for(int i=0;i<nums.length-1;i++)
     {
-        if(!h.contains(nums[i]))
+        if(nums[i]==nums[i+1])
         {
-          h.add(nums[i]);
+            return true;
         }
-        else
-         return true;
     }
-    return false;    
-    }
+    return false;
+ }
 }
