@@ -1,29 +1,30 @@
+//beats 9.90%
 // class Solution {
 //     public boolean containsDuplicate(int[] nums) {
-//     HashSet<Integer> h=new HashSet<>();
-//     for(int i=0;i<nums.length;i++)
+//     Arrays.sort(nums);
+//     for(int i=0;i<nums.length-1;i++)
 //     {
-//         if(!h.contains(nums[i]))
+//         if(nums[i]==nums[i+1])
 //         {
-//           h.add(nums[i]);
+//             return true;
 //         }
-//         else
-//          return true;
 //     }
-//     return false;    
-//     }
+//     return false;
+//  }
 // }
 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-    Arrays.sort(nums);
-    for(int i=0;i<nums.length-1;i++)
+    HashSet<Integer> h=new HashSet<>();
+    for(int i=0;i<nums.length;i++)
     {
-        if(nums[i]==nums[i+1])
+        if(!h.contains(nums[i]))
         {
-            return true;
+          h.add(nums[i]);
         }
+        else
+         return true;
     }
-    return false;
- }
+    return false;    
+    }
 }
