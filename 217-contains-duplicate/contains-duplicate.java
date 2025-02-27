@@ -13,18 +13,35 @@
 //  }
 // }
 
+
+//beats 88.41%
+// class Solution {
+//     public boolean containsDuplicate(int[] nums) {
+//     HashSet<Integer> h=new HashSet<>();
+//     for(int i=0;i<nums.length;i++)
+//     {
+//         if(!h.contains(nums[i]))
+//         {
+//           h.add(nums[i]);
+//         }
+//         else
+//          return true;
+//     }
+//     return false;    
+//     }
+// }
+
+//chat gpt
+import java.util.HashSet;
+
 class Solution {
     public boolean containsDuplicate(int[] nums) {
-    HashSet<Integer> h=new HashSet<>();
-    for(int i=0;i<nums.length;i++)
-    {
-        if(!h.contains(nums[i]))
-        {
-          h.add(nums[i]);
+        HashSet<Integer> h = new HashSet<>();
+        for (int num : nums) {
+            if (!h.add(num)) { // add() returns false if the element already exists
+                return true;
+            }
         }
-        else
-         return true;
-    }
-    return false;    
+        return false;
     }
 }
