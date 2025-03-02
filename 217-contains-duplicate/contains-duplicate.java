@@ -1,4 +1,4 @@
-//beats 9.90%
+//beats 9.90% (Used Sorting)
 // class Solution {
 //     public boolean containsDuplicate(int[] nums) {
 //     Arrays.sort(nums);
@@ -32,8 +32,6 @@
 // }
 
 //chat gpt
-import java.util.HashSet;
-
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         HashSet<Integer> h = new HashSet<>();
