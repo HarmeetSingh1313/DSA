@@ -43,7 +43,7 @@ class Solution {
          ts=ts+gas[i]-cost[i];
          cs=cs+gas[i]-cost[i];
          
-         if(cs<0)   // if value is at first index that is 0 then this if statement will not 
+         if(cs<0)   // if value is at first index that is 0 then this if statement will not run
           {
             index=i+1;
             cs=0;
