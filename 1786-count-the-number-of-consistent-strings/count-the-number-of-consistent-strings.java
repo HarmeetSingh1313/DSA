@@ -9,15 +9,16 @@ class Solution {
         for(int i=0;i<words.length;i++)
         {
             String s=words[i];
-            int t=0;
+            boolean t=true;
             for(int j=0;j<s.length();j++)
             {
-                if(h.contains (s.charAt(j)) ) 
-                 t++;
-                else 
-                 break;
+                if(!h.contains (s.charAt(j)) ) 
+                {
+                  t=false;
+                  break;
+                }
             }
-        if(t==s.length())
+        if(t)
          c++;     
         }    
     return c;
