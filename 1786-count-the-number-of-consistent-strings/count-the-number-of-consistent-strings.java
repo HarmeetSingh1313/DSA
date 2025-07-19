@@ -15,11 +15,11 @@ class Solution {
                 if(h.contains (s.charAt(j)) ) 
                  t++;
                 else 
-                 break; 
-                if(t==s.length())
-                 c++;     
+                 break;
             }
-        }
+        if(t==s.length())
+         c++;     
+        }    
     return c;
     }
 }
