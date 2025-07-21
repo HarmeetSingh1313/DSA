@@ -13,8 +13,7 @@ class Solution {
         h.put('M',1000);
         for(int i=n-1;i>=0;i--)
         {
-            char ch=s.charAt(i);
-            int  c=h.get(ch);
+            int  c=h.get(s.charAt(i));
             if(c>=p)
             {
                 t+=c;
